@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Match Stick</title>
+  </head>
+  
+    <h2>
+      Program to get the number of match sticks in n step :
+    </h2>
+    
+    <p>Enter the  step number :</p>
+    <input type="number" id="side1" name="number" value="1" />
+    
+    <button onclick="check()">Check Now</button>
+    <h2 id ="demo">Result </h2>
+    
+
+    <script>
+      function check()
+      {
+
+        let n = document.getElementById("side1").value;
+
+        document.getElementById("demo").innerHTML = matchHouses(n);
+        
+
+        
+      }
+      function matchHouses(n1)
+      {
+        let start = 6;
+        if(n1==1)
+            return 6;
+        else
+            {
+                for(let i= 1; i< n1 ; i++)
+                {
+                    start +=5;
+                }
+
+                return start;
+            }
+      }
+
+    </script>
+
+    
+    
+  </body>
+</html>
+
+
